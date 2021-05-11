@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-pretty-ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,12 +13,12 @@
   "author": "a.masalov",
   "license": "ISC",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.29.0",
-    "@typescript-eslint/parser": "^2.29.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.2"
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.3.0"
   }
 }
