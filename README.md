@@ -1,14 +1,22 @@
 # eslint-config-pretty-ts
 
-- typescript
-- react
-- prettier
+ESlint bundle with TS, React, Prettier etc. support
 
 ## install
+
+```sh
+npm add -D eslint-config-pretty-ts
+yarn add -D eslint-config-pretty-ts
+```
 
 ```js
 // .eslintrc.js
 module.exports = {
   extends: ['pretty-ts'],
 }
+```
+
+```sh
+npx eslint 'src/**/*.{js,jsx,ts,tsx}'
+npx eslint --fix 'src/**/*.{js,jsx,ts,tsx}'
 ```
