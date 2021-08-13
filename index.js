@@ -20,6 +20,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   rules: {
     curly: ['error', 'all'],
+    quotes: ['error', 'backtick'],
     camelcase: 'off',
     'no-shadow': 'off',
     'no-irregular-whitespace': 'off',

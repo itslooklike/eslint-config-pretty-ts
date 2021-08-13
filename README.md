@@ -19,4 +19,7 @@ module.exports = {
 ```sh
 npx eslint 'src/**/*.{js,jsx,ts,tsx}'
 npx eslint --fix 'src/**/*.{js,jsx,ts,tsx}'
+
+npx prettier --check .
+npx prettier --write 'src/**/*.{js,jsx,ts,tsx,svelte,json}'
 ```
