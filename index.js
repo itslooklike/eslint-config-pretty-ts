@@ -4,7 +4,6 @@ module.exports = {
     browser: true,
     jest: true,
   },
-  // ignorePatterns: ['.eslintrc.js'],
   globals: {
     React: true,
   },
@@ -25,7 +24,7 @@ module.exports = {
     'no-shadow': `off`,
     'no-irregular-whitespace': `off`,
     'no-underscore-dangle': `off`,
-    'no-unused-vars': `off`,
+    'no-unused-vars': `off`, // его обрабатывает @typescript-eslint/no-unused-vars
     'jsx-a11y/label-has-associated-control': `off`,
     'jsx-a11y/click-events-have-key-events': `off`,
     'jsx-a11y/no-static-element-interactions': `off`,
@@ -38,6 +37,7 @@ module.exports = {
     'react/require-default-props': `off`,
     'react/no-unescaped-entities': `off`,
     'react/no-array-index-key': `off`,
+    'react/jsx-handler-names': 2,
     'react/jsx-filename-extension': [2, { extensions: [`.js`, `.jsx`, `.ts`, `.tsx`] }],
     'import/prefer-default-export': `off`,
     'import/extensions': [
@@ -62,6 +62,19 @@ module.exports = {
         'import/no-extraneous-dependencies': 0,
         'react/jsx-props-no-spreading': 0,
         '@typescript-eslint/no-use-before-define': 0,
+      },
+    },
+    {
+      files: [`*.d.ts`],
+      rules: {
+        quotes: 0,
+      },
+    },
+    {
+      files: [`./*.js`],
+      rules: {
+        '@typescript-eslint/no-var-requires': 0,
+        'unicorn/prefer-module': 0,
       },
     },
   ],
