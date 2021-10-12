@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js'],
+  // ignorePatterns: ['.eslintrc.js'],
   globals: {
     React: true,
   },
