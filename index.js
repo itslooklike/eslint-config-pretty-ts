@@ -7,7 +7,9 @@ module.exports = {
   globals: {
     React: true,
   },
-  plugins: [`@typescript-eslint`, `unicorn`, `prettier`, `react-hooks`],
+  plugins: [`@typescript-eslint/eslint-plugin`, `unicorn`, `prettier`, `react-hooks`].map(
+    require.resolve
+  ),
   extends: [
     `eslint:recommended`,
     `plugin:@typescript-eslint/recommended`,
@@ -25,13 +27,19 @@ module.exports = {
     'no-irregular-whitespace': `off`,
     'no-underscore-dangle': `off`,
     'no-unused-vars': `off`, // его обрабатывает @typescript-eslint/no-unused-vars
+    'no-use-before-define': `off`,
+
     'jsx-a11y/label-has-associated-control': `off`,
     'jsx-a11y/click-events-have-key-events': `off`,
     'jsx-a11y/no-static-element-interactions': `off`,
     'jsx-a11y/no-noninteractive-element-interactions': `off`,
-    'no-use-before-define': `off`,
+
     '@typescript-eslint/no-use-before-define': `error`,
     '@typescript-eslint/explicit-module-boundary-types': `off`,
+    '@typescript-eslint/indent': `off`,
+    '@typescript-eslint/no-unused-vars': `error`,
+    '@typescript-eslint/no-shadow': `error`,
+
     'react/react-in-jsx-scope': `off`,
     'react/prop-types': `off`,
     'react/require-default-props': `off`,
@@ -39,16 +47,16 @@ module.exports = {
     'react/no-array-index-key': `off`,
     'react/jsx-handler-names': 2,
     'react/jsx-filename-extension': [2, { extensions: [`.js`, `.jsx`, `.ts`, `.tsx`] }],
+
     'import/prefer-default-export': `off`,
     'import/extensions': [
       `error`,
       `ignorePackages`,
       { js: `never`, jsx: `never`, ts: `never`, tsx: `never` },
     ],
-    '@typescript-eslint/indent': `off`,
-    '@typescript-eslint/no-unused-vars': `error`,
-    '@typescript-eslint/no-shadow': `error`,
+
     'unicorn/no-null': `off`,
+    'unicorn/no-array-callback-reference': `off`,
     'unicorn/no-array-reduce': `off`,
     'unicorn/new-for-builtins': `off`,
     'unicorn/numeric-separators-style': [`error`, { number: { minimumDigits: 0, groupLength: 3 } }],
