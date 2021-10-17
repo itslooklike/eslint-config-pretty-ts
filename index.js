@@ -7,9 +7,12 @@ module.exports = {
   globals: {
     React: true,
   },
-  plugins: [`@typescript-eslint/eslint-plugin`, `unicorn`, `prettier`, `react-hooks`].map(
-    require.resolve
-  ),
+  plugins: [
+    `@typescript-eslint/eslint-plugin`,
+    `eslint-plugin-unicorn`,
+    `eslint-plugin-prettier`,
+    `eslint-plugin-react-hooks`,
+  ].map(require.resolve),
   extends: [
     `eslint:recommended`,
     `plugin:@typescript-eslint/recommended`,
